@@ -15,7 +15,7 @@ Init the rust section of the repo:
 
 Install deps:
 
-`cargo add reqwest`
+`cargo add reqwest -F blocking` HTTP Request client with the blocking feature
 
 Write simple fetcher for picsum
 
