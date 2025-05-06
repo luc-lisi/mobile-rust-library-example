@@ -7,19 +7,6 @@ This is meant to be a template project which implements a shared Rust client bet
 
 ## Step-by-step Walkthrough
 
-Basically everything that was done in order
-
-Init the rust section of the repo:
-
-`cargo new rust`
-
-Install deps:
-
-`cargo add reqwest -F blocking` HTTP Request client with the blocking feature
-
-Write simple fetcher for picsum
-
-
 ### Initial Repo Setup
 
 #### Rust
