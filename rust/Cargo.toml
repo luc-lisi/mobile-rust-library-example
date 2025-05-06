@@ -1,0 +1,6 @@
+[workspace]
+
+members = ["dogs", "uniffi-bindgen"]
+
+[workspace.dependencies]
+uniffi = "0.29.2"
