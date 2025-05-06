@@ -4,6 +4,11 @@ This is meant to be a template project which implements a shared Rust client bet
 
 ## Overview
 
+This project is organized into 3 main sub directories:
+1. `android/`
+2. `ios/`
+3. `rust/`
+
 ## Step-by-step Walkthrough
 
 ### Initial Repo Setup
