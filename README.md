@@ -1,6 +1,6 @@
 # Mobile Rust Template
 
-This is meant to be a template project which implements a shared Rust client between IOS and Android mobile apps. This template project uses Rust to make a request for a picture URL from [picsum](https://picsum.photos/)
+This is meant to be a template project which implements a shared Rust client between IOS and Android mobile apps. This template project uses Rust to make a request for a picture of a dog.
 
 ## Overview
 
