@@ -4,7 +4,6 @@ This is meant to be a template project which implements a shared Rust client bet
 
 ## Overview
 
-
 ## Step-by-step Walkthrough
 
 ### Initial Repo Setup
