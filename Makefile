@@ -63,11 +63,11 @@ summarize:
 
 # Clean build and output artifacts
 clean:
+	rm -rf dist/android/build && \
+	rm -rf dist/android/gradle && \
+	rm -rf dist/android/.gradle && \
+	rm -rf dist/android/rustlib/build && \
+	rm -rf dist/android/rustlib/src && \
+	rm -rf dist/.gradle && \
 	cd rust && \
-	cargo clean && \
-	rm -rf android/build && \
-	rm -rf android/gradle && \
-	rm -rf android/.gradle && \
-	rm -rf android/rustlib/build && \
-	rm -rf android/rustlib/src &&
-
+	cargo clean
