@@ -7,7 +7,11 @@ edition = "2024"
 crate-type = ["cdylib", "staticlib", "lib"]
 
 [dependencies]
-reqwest = { version = "0.12.15", features = ["blocking", "json"] }
+reqwest = { version = "0.12.15", default-features = false, features = [
+  "blocking",
+  "json",
+  "rustls-tls",
+] }
 serde = "1.0.219"
 
 uniffi = { version = "0.29.2", features = ["cli"] }

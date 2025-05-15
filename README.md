@@ -55,14 +55,41 @@ This lib file is then used by uniffi's CLI to generate the `bindings/` directory
 
 #### Rust
 
-##### Dependencies
-
-The core dependency used here is [unnifi](https://github.com/mozilla/uniffi-rs) which lets us generate bindings for non-Rust languages such as Kotlin and Swift.
+- Cargo init dogs and uniffi uniffi-bindgen
+- Setup the workspace
+- install deps where they need to good
+- Write some code to get those dogs
+- Setup the Makefile
 
 #### Android
 
-##### Dependencies
+- Get android studio
+- init a new repo in our android directory
+- brew install gradle
+- brew install openjdk
+
+
+- gradle wrapper
+- echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties
+
+
+##### Setting up Cargo NDK
+https://github.com/willir/cargo-ndk-android-gradle
+
+First, we need to setup our binaries for android so that rust can cross-compile to them.
+
+To do this we install the rust tollchains for android like:
+
+```sh
+rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
+```
+
+Now install the NDK with:
+
+```sh
+cargo install cargo-ndk
+```
+
 
 #### IOS
 
-##### Dependencies
