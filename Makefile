@@ -3,7 +3,7 @@ ABIS = armeabi-v7a arm64-v8a x86 x86_64
 RUST_BUILD_DIR := rust/target/release
 OUT_DIR = ./dist
 ANDROID_ARTIFACT_DIR = $(OUT_DIR)/android/android-artifacts
-ANDROID_PACKAGE_DIR = ./dist/android/android-package/src/main
+ANDROID_PACKAGE_DIR = ./dist/android/rustlib/src/main
 JNI_LIBS_DIR = $(ANDROID_ARTIFACT_DIR)/jniLibs
 KOTLIN_OUT_DIR = $(ANDROID_ARTIFACT_DIR)/kotlin
 
@@ -51,7 +51,7 @@ package-android:
 
 # Creates a bundled .aar package usable for import
 build-android-aar:
-	cd android && \
+	cd dist/android && \
 	gradle wrapper && \
   ./gradlew :rustlib:assembleRelease
 
