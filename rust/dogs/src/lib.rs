@@ -1,5 +1,6 @@
 mod fetch;
 mod types;
+
 use fetch::fetch_dog_list;
 use types::DogBreedList;
 

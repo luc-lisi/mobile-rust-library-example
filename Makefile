@@ -4,6 +4,7 @@ RUST_BUILD_DIR := rust/target/release
 OUT_DIR = ./dist
 ANDROID_ARTIFACT_DIR = $(OUT_DIR)/android/android-artifacts
 ANDROID_PACKAGE_DIR = ./dist/android/rustlib/src/main
+ANDROID_AAR_PATH = ./dist/android/rustlib/build/outputs/aar/rustlib-release.aar
 JNI_LIBS_DIR = $(ANDROID_ARTIFACT_DIR)/jniLibs
 KOTLIN_OUT_DIR = $(ANDROID_ARTIFACT_DIR)/kotlin
 
@@ -54,6 +55,7 @@ build-android-aar:
 	cd dist/android && \
 	gradle wrapper && \
   ./gradlew :rustlib:assembleRelease
+	@echo "Android build complete! .aar file in: $(ANDROID_AAR_PATH)"
 
 # Print summary to user
 summarize:
@@ -69,5 +71,7 @@ clean:
 	rm -rf dist/android/rustlib/build && \
 	rm -rf dist/android/rustlib/src && \
 	rm -rf dist/.gradle && \
+	rm dist/android/gradlew && \
+	rm dist/android/gradlew.bat && \
 	cd rust && \
 	cargo clean

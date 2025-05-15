@@ -71,6 +71,16 @@ This lib file is then used by uniffi's CLI to generate the `bindings/` directory
 
 - gradle wrapper
 - echo "sdk.dir=$HOME/Library/Android/sdk" > local.properties
+- <uses-permission android:name="android.permission.INTERNET"/> in AndroidManifext.xml
+
+
+
+Example app:
+
+```kt
+implementation(files("../../../../dist/android/rustlib/build/outputs/aar/rustlib-release.aar"))
+implementation("net.java.dev.jna:jna:5.12.0@aar")
+```
 
 
 ##### Setting up Cargo NDK
