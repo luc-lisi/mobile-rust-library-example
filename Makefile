@@ -110,10 +110,13 @@ build-android-aar:
 	@echo "Android build complete! .aar file in: $(ANDROID_AAR_PATH)"
 
 # Print summary to user
-summarize:
+summarize-android:
 	@echo "Packaging .so files and Kotlin bindings..."
 	@echo "JNI libs copied to $(ANDROID_PACKAGE_DIR)/jniLibs"
 	@echo "Kotlin bindings in $(ANDROID_PACKAGE_DIR)/kotlin"
+
+summarize-ios:
+	@echo "IOS package files built..."
 
 # Clean build and output artifacts
 clean:
@@ -123,7 +126,8 @@ clean:
 	rm -rf dist/android/rustlib/build && \
 	rm -rf dist/android/rustlib/src && \
 	rm -rf dist/ios/Frameworks && \
-	rm -rf dist/RustLib && \
+	rm -rf dist/ios/RustLib && \
+	rm -rf dist/ios/$(LIB_NAME).swift && \
 	rm -rf dist/.gradle && \
 	rm dist/android/gradlew && \
 	rm dist/android/gradlew.bat && \
