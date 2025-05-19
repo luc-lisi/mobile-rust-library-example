@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2086F7C2DDBD4FF00A4377E /* dogs.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2086F392DDB8F4200A4377E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2086F232DDB8F4100A4377E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2086F2A2DDB8F4100A4377E;
+			remoteInfo = HelloDog;
+		};
+		A2086F432DDB8F4200A4377E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2086F232DDB8F4100A4377E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2086F2A2DDB8F4100A4377E;
+			remoteInfo = HelloDog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2086F2B2DDB8F4100A4377E /* HelloDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2086F382DDB8F4200A4377E /* HelloDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2086F422DDB8F4200A4377E /* HelloDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2086F682DDB9AE000A4377E /* dogsFFI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dogsFFI.h; sourceTree = "<group>"; };
+		A2086F742DDBCEFB00A4377E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = dogs.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A2086F2D2DDB8F4100A4377E /* HelloDog */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HelloDog;
+			sourceTree = "<group>";
+		};
+		A2086F3B2DDB8F4200A4377E /* HelloDogTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HelloDogTests;
+			sourceTree = "<group>";
+		};
+		A2086F452DDB8F4200A4377E /* HelloDogUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HelloDogUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2086F282DDB8F4100A4377E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2086F7C2DDBD4FF00A4377E /* dogs.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F352DDB8F4200A4377E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F3F2DDB8F4200A4377E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2086F222DDB8F4100A4377E = {
+			isa = PBXGroup;
+			children = (
+				A2086F2D2DDB8F4100A4377E /* HelloDog */,
+				A2086F3B2DDB8F4200A4377E /* HelloDogTests */,
+				A2086F452DDB8F4200A4377E /* HelloDogUITests */,
+				A2086F2C2DDB8F4100A4377E /* Products */,
+				A2086F6B2DDB9AE000A4377E /* RustLib */,
+				A2086F7B2DDBD4FF00A4377E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A2086F2C2DDB8F4100A4377E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2086F2B2DDB8F4100A4377E /* HelloDog.app */,
+				A2086F382DDB8F4200A4377E /* HelloDogTests.xctest */,
+				A2086F422DDB8F4200A4377E /* HelloDogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2086F692DDB9AE000A4377E /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A2086F682DDB9AE000A4377E /* dogsFFI.h */,
+				A2086F742DDBCEFB00A4377E /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A2086F6B2DDB9AE000A4377E /* RustLib */ = {
+			isa = PBXGroup;
+			children = (
+				A2086F692DDB9AE000A4377E /* include */,
+			);
+			path = RustLib;
+			sourceTree = "<group>";
+		};
+		A2086F7B2DDBD4FF00A4377E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2086F2A2DDB8F4100A4377E /* HelloDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2086F4C2DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDog" */;
+			buildPhases = (
+				A2086F272DDB8F4100A4377E /* Sources */,
+				A2086F282DDB8F4100A4377E /* Frameworks */,
+				A2086F292DDB8F4100A4377E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A2086F2D2DDB8F4100A4377E /* HelloDog */,
+			);
+			name = HelloDog;
+			packageProductDependencies = (
+			);
+			productName = HelloDog;
+			productReference = A2086F2B2DDB8F4100A4377E /* HelloDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2086F372DDB8F4200A4377E /* HelloDogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2086F4F2DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDogTests" */;
+			buildPhases = (
+				A2086F342DDB8F4200A4377E /* Sources */,
+				A2086F352DDB8F4200A4377E /* Frameworks */,
+				A2086F362DDB8F4200A4377E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2086F3A2DDB8F4200A4377E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A2086F3B2DDB8F4200A4377E /* HelloDogTests */,
+			);
+			name = HelloDogTests;
+			packageProductDependencies = (
+			);
+			productName = HelloDogTests;
+			productReference = A2086F382DDB8F4200A4377E /* HelloDogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2086F412DDB8F4200A4377E /* HelloDogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2086F522DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDogUITests" */;
+			buildPhases = (
+				A2086F3E2DDB8F4200A4377E /* Sources */,
+				A2086F3F2DDB8F4200A4377E /* Frameworks */,
+				A2086F402DDB8F4200A4377E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2086F442DDB8F4200A4377E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A2086F452DDB8F4200A4377E /* HelloDogUITests */,
+			);
+			name = HelloDogUITests;
+			packageProductDependencies = (
+			);
+			productName = HelloDogUITests;
+			productReference = A2086F422DDB8F4200A4377E /* HelloDogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2086F232DDB8F4100A4377E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A2086F2A2DDB8F4100A4377E = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A2086F372DDB8F4200A4377E = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A2086F2A2DDB8F4100A4377E;
+					};
+					A2086F412DDB8F4200A4377E = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A2086F2A2DDB8F4100A4377E;
+					};
+				};
+			};
+			buildConfigurationList = A2086F262DDB8F4100A4377E /* Build configuration list for PBXProject "HelloDog" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2086F222DDB8F4100A4377E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A2086F2C2DDB8F4100A4377E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2086F2A2DDB8F4100A4377E /* HelloDog */,
+				A2086F372DDB8F4200A4377E /* HelloDogTests */,
+				A2086F412DDB8F4200A4377E /* HelloDogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2086F292DDB8F4100A4377E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F362DDB8F4200A4377E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F402DDB8F4200A4377E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2086F272DDB8F4100A4377E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F342DDB8F4200A4377E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2086F3E2DDB8F4200A4377E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2086F3A2DDB8F4200A4377E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2086F2A2DDB8F4100A4377E /* HelloDog */;
+			targetProxy = A2086F392DDB8F4200A4377E /* PBXContainerItemProxy */;
+		};
+		A2086F442DDB8F4200A4377E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2086F2A2DDB8F4100A4377E /* HelloDog */;
+			targetProxy = A2086F432DDB8F4200A4377E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2086F4A2DDB8F4200A4377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2086F4B2DDB8F4200A4377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2086F4D2DDB8F4200A4377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RustLib/include/**";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2086F4E2DDB8F4200A4377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RustLib/include/**";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2086F502DDB8F4200A4377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloDog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HelloDog";
+			};
+			name = Debug;
+		};
+		A2086F512DDB8F4200A4377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelloDog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HelloDog";
+			};
+			name = Release;
+		};
+		A2086F532DDB8F4200A4377E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloDog;
+			};
+			name = Debug;
+		};
+		A2086F542DDB8F4200A4377E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.HelloDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloDog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2086F262DDB8F4100A4377E /* Build configuration list for PBXProject "HelloDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2086F4A2DDB8F4200A4377E /* Debug */,
+				A2086F4B2DDB8F4200A4377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2086F4C2DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2086F4D2DDB8F4200A4377E /* Debug */,
+				A2086F4E2DDB8F4200A4377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2086F4F2DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2086F502DDB8F4200A4377E /* Debug */,
+				A2086F512DDB8F4200A4377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2086F522DDB8F4200A4377E /* Build configuration list for PBXNativeTarget "HelloDogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2086F532DDB8F4200A4377E /* Debug */,
+				A2086F542DDB8F4200A4377E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2086F232DDB8F4100A4377E /* Project object */;
+}

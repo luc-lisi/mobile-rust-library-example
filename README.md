@@ -89,6 +89,7 @@ I final success message should be seen with the location of the `.aar` output fo
 - init a new repo in our android directory
 - brew install gradle
 - brew install openjdk
+- cargo install cargo-ndk
 
 
 - gradle wrapper
