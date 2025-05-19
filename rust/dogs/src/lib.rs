@@ -1,7 +1,7 @@
 mod fetch;
 mod types;
 
-use fetch::fetch_dog_list;
+use fetch::{fetch_dog_by_breed, fetch_dog_list};
 use types::DogBreedList;
 
 uniffi::setup_scaffolding!();
@@ -25,6 +25,21 @@ fn list_dogs() -> DogBreedList {
                 e
             );
             DogBreedList { breeds: vec![] }
+        }
+    }
+}
+
+#[uniffi::export]
+fn get_dog(dog_breed: &str) -> String {
+    let result = fetch_dog_by_breed(dog_breed);
+    match result {
+        Ok(v) => v.message,
+        Err(e) => {
+            eprintln!(
+                "Something went wrong while attempting to get a picture for {:?} breed: {:?}",
+                dog_breed, e
+            );
+            String::from("Not Found")
         }
     }
 }

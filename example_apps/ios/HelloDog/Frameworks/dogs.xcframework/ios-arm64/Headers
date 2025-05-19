@@ -266,6 +266,11 @@ void uniffi_dogs_fn_free_dogbreedlist(void*_Nonnull ptr, RustCallStatus *_Nonnul
 RustBuffer uniffi_dogs_fn_method_dogbreedlist_get_breeds(void*_Nonnull ptr, RustCallStatus *_Nonnull out_status
 );
 #endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_DOGS_FN_FUNC_GET_DOG
+#define UNIFFI_FFIDEF_UNIFFI_DOGS_FN_FUNC_GET_DOG
+RustBuffer uniffi_dogs_fn_func_get_dog(RustBuffer dog_breed, RustCallStatus *_Nonnull out_status
+);
+#endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_DOGS_FN_FUNC_LIST_DOGS
 #define UNIFFI_FFIDEF_UNIFFI_DOGS_FN_FUNC_LIST_DOGS
 void*_Nonnull uniffi_dogs_fn_func_list_dogs(RustCallStatus *_Nonnull out_status
@@ -550,6 +555,12 @@ void ffi_dogs_rust_future_free_void(uint64_t handle
 #ifndef UNIFFI_FFIDEF_FFI_DOGS_RUST_FUTURE_COMPLETE_VOID
 #define UNIFFI_FFIDEF_FFI_DOGS_RUST_FUTURE_COMPLETE_VOID
 void ffi_dogs_rust_future_complete_void(uint64_t handle, RustCallStatus *_Nonnull out_status
+);
+#endif
+#ifndef UNIFFI_FFIDEF_UNIFFI_DOGS_CHECKSUM_FUNC_GET_DOG
+#define UNIFFI_FFIDEF_UNIFFI_DOGS_CHECKSUM_FUNC_GET_DOG
+uint16_t uniffi_dogs_checksum_func_get_dog(void
+    
 );
 #endif
 #ifndef UNIFFI_FFIDEF_UNIFFI_DOGS_CHECKSUM_FUNC_LIST_DOGS

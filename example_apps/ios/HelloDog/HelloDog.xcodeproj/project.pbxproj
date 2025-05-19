@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2086F7C2DDBD4FF00A4377E /* dogs.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */; };
+		A2086F8A2DDBDE2E00A4377E /* dogs.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2086F882DDBDE2E00A4377E /* dogs.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +31,9 @@
 		A2086F2B2DDB8F4100A4377E /* HelloDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2086F382DDB8F4200A4377E /* HelloDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2086F422DDB8F4200A4377E /* HelloDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2086F682DDB9AE000A4377E /* dogsFFI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dogsFFI.h; sourceTree = "<group>"; };
-		A2086F742DDBCEFB00A4377E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = dogs.xcframework; sourceTree = "<group>"; };
+		A2086F842DDBDE2A00A4377E /* dogsFFI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dogsFFI.h; sourceTree = "<group>"; };
+		A2086F852DDBDE2A00A4377E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		A2086F882DDBDE2E00A4377E /* dogs.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = dogs.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2086F7C2DDBD4FF00A4377E /* dogs.xcframework in Frameworks */,
+				A2086F8A2DDBDE2E00A4377E /* dogs.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +87,8 @@
 				A2086F3B2DDB8F4200A4377E /* HelloDogTests */,
 				A2086F452DDB8F4200A4377E /* HelloDogUITests */,
 				A2086F2C2DDB8F4100A4377E /* Products */,
-				A2086F6B2DDB9AE000A4377E /* RustLib */,
-				A2086F7B2DDBD4FF00A4377E /* Frameworks */,
+				A2086F872DDBDE2A00A4377E /* RustLib */,
+				A2086F892DDBDE2E00A4377E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,27 +102,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A2086F692DDB9AE000A4377E /* include */ = {
+		A2086F862DDBDE2A00A4377E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A2086F682DDB9AE000A4377E /* dogsFFI.h */,
-				A2086F742DDBCEFB00A4377E /* module.modulemap */,
+				A2086F842DDBDE2A00A4377E /* dogsFFI.h */,
+				A2086F852DDBDE2A00A4377E /* module.modulemap */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		A2086F6B2DDB9AE000A4377E /* RustLib */ = {
+		A2086F872DDBDE2A00A4377E /* RustLib */ = {
 			isa = PBXGroup;
 			children = (
-				A2086F692DDB9AE000A4377E /* include */,
+				A2086F862DDBDE2A00A4377E /* include */,
 			);
 			path = RustLib;
 			sourceTree = "<group>";
 		};
-		A2086F7B2DDBD4FF00A4377E /* Frameworks */ = {
+		A2086F892DDBDE2E00A4377E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A2086F7A2DDBD4FF00A4377E /* dogs.xcframework */,
+				A2086F882DDBDE2E00A4377E /* dogs.xcframework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -432,7 +432,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RustLib/include/**";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/RustLib/include/**";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,7 +460,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/RustLib/include/**";
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/RustLib/include/**";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

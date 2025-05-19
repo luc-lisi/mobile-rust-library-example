@@ -584,6 +584,13 @@ fileprivate struct FfiConverterSequenceString: FfiConverterRustBuffer {
         return seq
     }
 }
+public func getDog(dogBreed: String) -> String  {
+    return try!  FfiConverterString.lift(try! rustCall() {
+    uniffi_dogs_fn_func_get_dog(
+        FfiConverterString.lower(dogBreed),$0
+    )
+})
+}
 public func listDogs() -> DogBreedList  {
     return try!  FfiConverterTypeDogBreedList_lift(try! rustCall() {
     uniffi_dogs_fn_func_list_dogs($0
@@ -605,6 +612,9 @@ private let initializationResult: InitializationResult = {
     let scaffolding_contract_version = ffi_dogs_uniffi_contract_version()
     if bindings_contract_version != scaffolding_contract_version {
         return InitializationResult.contractVersionMismatch
+    }
+    if (uniffi_dogs_checksum_func_get_dog() != 31522) {
+        return InitializationResult.apiChecksumMismatch
     }
     if (uniffi_dogs_checksum_func_list_dogs() != 26343) {
         return InitializationResult.apiChecksumMismatch
