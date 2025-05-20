@@ -89,19 +89,6 @@ package-ios:
 	mv $(IOS_ARTIFACT_DIR)/$(LIB_NAME)FFI.modulemap $(IOS_ARTIFACT_DIR)/RustLib/include/module.modulemap
 
 
-# Not using this currently
-package-ios-module:
-	swiftc \
-    -module-name dogLib \
-		-emit-library -o ./rust/target/release/libdogs.dylib \
-		-emit-module -emit-module-path ./dist/ios/module  \
-		-parse-as-library \
-    -L ./rust/target/release/ \
-    -ldogs \
-		-Xcc -fmodule-map-file=./dist/ios/dogsFFI.modulemap \
-		./dist/ios/dogs.swift \
-
-
 # Creates a bundled .aar package usable for import
 build-android-aar:
 	cd dist/android && \
