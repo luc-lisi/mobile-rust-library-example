@@ -134,10 +134,23 @@ For android, we use [gradle wrapper](https://docs.gradle.org/current/userguide/g
 
 `make build-android-aar`
 
+For IOS, we use a (`xcframework` artifact)[https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle] which we build using `xcodebuild`.
+
+The make command for this is:
+
+`make build-ios-xcframework`
+
+### Using our generated Artifacts in the Apps
+
+Once you've run `make all` successfully, you are ready to link the artifact to your local example app! The process is pretty different across Android and IOS, so I'll go over each individually.
+
+#### Android
+
+#### IOS
 
 ## Step-by-step Walkthrough
-                                                                 e
-### Initial Repo Setup                                                                                                                                                                                                                                                               t
+                                                                  e
+### Initial Repo Setup                                
 
 #### Rust
 

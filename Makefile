@@ -38,7 +38,7 @@ build-rust:
 
 build-android: build-android-targets generate-android-bindings package-android build-android-aar summarize-android
 
-build-ios: build-ios-targets generate-ios-bindings package-ios build-android-aar summarize-ios
+build-ios: build-ios-targets generate-ios-bindings package-ios build-ios-xcframework summarize-ios
 
 # Build .so files for all ANDROID_ABIS
 build-android-targets:
@@ -77,33 +77,33 @@ package-ios:
 	rm -rf $(IOS_ARTIFACT_DIR)/Frameworks && \
 	rm -rf $(IOS_ARTIFACT_DIR)/RustLib && \
 	mkdir $(IOS_ARTIFACT_DIR)/Frameworks && \
-	xcodebuild -create-xcframework \
-  -library rust/target/aarch64-apple-ios/release/lib${LIB_NAME}.a \
-  -headers $(IOS_ARTIFACT_DIR)/dogsFFI.h \
-  -library rust/target/aarch64-apple-ios-sim/release/lib${LIB_NAME}.a \
-  -headers $(IOS_ARTIFACT_DIR)/dogsFFI.h \
-  -output $(IOS_ARTIFACT_DIR)/Frameworks/$(LIB_NAME).xcframework && \
 	mkdir $(IOS_ARTIFACT_DIR)/RustLib && \
 	mkdir $(IOS_ARTIFACT_DIR)/RustLib/include && \
 	mv $(IOS_ARTIFACT_DIR)/$(LIB_NAME)FFI.h $(IOS_ARTIFACT_DIR)/RustLib/include/$(LIB_NAME)FFI.h && \
 	mv $(IOS_ARTIFACT_DIR)/$(LIB_NAME)FFI.modulemap $(IOS_ARTIFACT_DIR)/RustLib/include/module.modulemap
 
+build-ios-xcframework:
+	xcodebuild -create-xcframework \
+  -library rust/target/aarch64-apple-ios/release/lib${LIB_NAME}.a \
+  -headers $(IOS_ARTIFACT_DIR)/RustLib/include/dogsFFI.h \
+  -library rust/target/aarch64-apple-ios-sim/release/lib${LIB_NAME}.a \
+  -headers $(IOS_ARTIFACT_DIR)/RustLib/include/dogsFFI.h \
+  -output $(IOS_ARTIFACT_DIR)/Frameworks/$(LIB_NAME).xcframework
 
 # Creates a bundled .aar package usable for import
 build-android-aar:
 	cd dist/android && \
 	gradle wrapper && \
   ./gradlew :rustlib:assembleRelease
-	@echo "Android build complete! .aar file in: $(ANDROID_AAR_PATH)"
 
 # Print summary to user
 summarize-android:
-	@echo "Packaging .so files and Kotlin bindings..."
 	@echo "JNI libs copied to $(ANDROID_PACKAGE_DIR)/jniLibs"
 	@echo "Kotlin bindings in $(ANDROID_PACKAGE_DIR)/kotlin"
+	@echo "Android build complete! .aar file in: $(ANDROID_AAR_PATH)"
 
 summarize-ios:
-	@echo "IOS package files built..."
+	@echo "IOS package files built!"
 
 # Clean build and output artifacts
 clean:
