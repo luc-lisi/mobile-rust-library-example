@@ -64,7 +64,7 @@ Things you will need:
 - [`ndk`] (Environment config helper for building Android libs from rust, install via Android Studio's "SDK Manager" > "SDK Tools" tab)
 - [`cargo-ndk`](https://github.com/bbqsrc/cargo-ndk) `cargo install cargo-ndk`
 - Set `ANDROID_HOME= ~/Library/Android/sdk` in your `.zshrc`
-- [XCode] (For the IOS app and xcframework creation -- you will need to create an AppleId account, but you can skip entering your credit card info with the small "None" at the end of the CC options)
+- [XCode](https://developer.apple.com/xcode/) (For the IOS app and xcframework creation -- you will need to create an AppleId account, but you can skip entering your credit card info with the small "None" at the end of the CC options)
 
 
 You will also have to ensure that you have the correct targets added to your Rust toolchain. To download and link them, just run:
