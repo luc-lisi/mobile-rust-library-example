@@ -56,11 +56,15 @@ dist/ios
 To try this locally, you will need to make sure you have a few dependencies installed.
 
 Things you will need:
-- `cargo`
-- `gradle` (For android builds)
-- `openjdk` or something equivalent (We need this)
-- Android Studio (Not required but highly recommended)
-- XCode (For the IOS app and xcframework creation)
+- [`cargo`](https://doc.rust-lang.org/cargo/getting-started/installation.html)
+- [`gradle`](https://gradle.org/install/) (For android builds)
+- [`openjdk`](https://openjdk.org/) or something equivalent (We need this)
+  - `brew install openjdk`
+- [Android Studio](https://developer.android.com/studio)
+- [`ndk`] (Environment config helper for building Android libs from rust, install via Android Studio's "SDK Manager" > "SDK Tools" tab)
+- [`cargo-ndk`](https://github.com/bbqsrc/cargo-ndk) `cargo install cargo-ndk`
+- Set `ANDROID_HOME= ~/Library/Android/sdk` in your `.zshrc`
+- [XCode] (For the IOS app and xcframework creation -- you will need to create an AppleId account, but you can skip entering your credit card info with the small "None" at the end of the CC options)
 
 
 You will also have to ensure that you have the correct targets added to your Rust toolchain. To download and link them, just run:
@@ -124,7 +128,7 @@ For Swift, this will generate a `.modulemap` file, a `.h` file, and a `.swift` f
 As a result, I included a `package-android` and `package-ios` which cleans up the directory structure of our output to place everything in a form that will be easy for our app to ingest.
 
 
-#### Building distributable able bundles
+#### Building distributable bundles
 
 Okay so this has been a lot of compiling and cross-compiling. But there are a *lot* of different architectures we need our code to be able to run on. But if you've gotten this far, we are done with we are finally ready to bundle all these binaries into a naive form our apps can ingest!
 
@@ -149,8 +153,8 @@ Once you've run `make all` successfully, you are ready to link the artifact to y
 #### IOS
 
 ## Step-by-step Walkthrough
-                                                                  e
-### Initial Repo Setup                                
+
+### Initial Repo Setup
 
 #### Rust
 
@@ -194,4 +198,3 @@ rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-andro
 
 
 #### IOS
-
