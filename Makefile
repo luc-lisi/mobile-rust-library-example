@@ -11,7 +11,6 @@ ANDROID_PACKAGE_DIR = ./dist/android/rustlib/src/main
 ANDROID_AAR_PATH = ./dist/android/rustlib/build/outputs/aar/rustlib-release.aar
 JNI_LIBS_DIR = $(ANDROID_ARTIFACT_DIR)/jniLibs
 
-
 SWIFT_OUT_DIR = $(ANDROID_ARTIFACT_DIR)/kotlin
 KOTLIN_OUT_DIR = $(ANDROID_ARTIFACT_DIR)/kotlin
 
